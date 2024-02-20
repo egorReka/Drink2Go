@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка</header>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drink2Go</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="page__body">
+  <header class="header" data-test="header"></header>
+
+  <main class="main">
+    <section class="hero" data-test="hero"></section>
+    <section class="features" data-test="features"></section>
+    <section class="catalog" data-test="catalog"></section>
+    <article class="map" data-test="map"></article>
+  </main>
+
+  <footer class="footer" data-test="footer"></footer>
+
+  <script src="scripts/index.js">
+  </script>
+</body>
+
 </html>
