@@ -1,0 +1,23 @@
+.header {
+  position: relative;
+  background-color: var(--base-white);
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}

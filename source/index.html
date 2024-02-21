@@ -9,7 +9,71 @@
 </head>
 
 <body class="page__body">
-  <header class="header" data-test="header"></header>
+  <header class="header" data-test="header">
+    <div class="container">
+      <div class="header__wrapper">
+
+        <div class="logo">
+          <a class="logo__link"> <!-- TODO href -->
+            <picture>
+              <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59">
+              <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50">
+              <img class="logo__image" src="./images/logo-mobile.svg" width="33" height="38"
+                alt="Интеренет-магазин Drink2Go.">
+            </picture>
+          </a>
+          <h1 class="logo__title">Интернет-магазин кофейных напитков</h1>
+        </div>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link--current">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Каталог</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Доставка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">О нас</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="custom-menu">
+          <li class="custom-menu__item">
+            <a class="custom-menu__link" href="#" aria-hidden="true" focusable="false">
+              <svg class="custom-menu__icon" width="16" height="16" role="img">
+                <use xlink:href="./images/icons/stack.svg#user"></use>
+              </svg>
+              <p class="custom-menu__text">Войти</p>
+            </a>
+          </li>
+          <li class="custom-menu__item">
+            <a class="custom-menu__link" href="#" aria-hidden="true" focusable="false">
+              <svg class="custom-menu__icon" width="16" height="16" role="img">
+                <use xlink:href="./images/icons/stack.svg#union"></use>
+              </svg>
+              <p class="custom-menu__text">Корзина</p>
+            </a>
+          </li>
+          <li class="custom-menu__item custom-menu__item--burger">
+            <button class="custom-menu__burger burger">
+              <div class="burger__wrapper">
+                <span class="burger__lines burger__lines--top"></span>
+                <span class="burger__lines burger__lines--middle"></span>
+                <span class="burger__lines burger__lines--bottom"></span>
+              </div>
+              <span class="visually-hidden">Открыть меню.</span> <!-- TODO Сменить textContent -->
+            </button>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
 
   <main class="main">
     <section class="hero" data-test="hero"></section>

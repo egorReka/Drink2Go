@@ -3,6 +3,11 @@
 @import "./global/global.scss";
 @import "./global/fonts.scss";
 @import "./global/visually-hidden.scss";
+@import "./global/container.scss";
 
 /* BLOCKS */
-// @import "./blocks/header.scss";
+@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/custom-menu.scss";
+@import "./blocks/burger.scss";

@@ -1,0 +1,39 @@
+@use "../bootstrap.scss" as *;
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+}
+
+.logo__image {
+  width: 32px;
+  height: 36px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 82px;
+    margin-right: 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
+}
+
+.logo__title {
+  position: fixed;
+  width: 130px;
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 133%;
+  color: var(--base-black);
+  transform: scale(0);
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    transform: none;
+  }
+}

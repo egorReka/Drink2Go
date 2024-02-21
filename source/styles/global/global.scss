@@ -6,13 +6,13 @@
   box-sizing: border-box;
 }
 
-.html {
+html {
   display: grid;
   min-block-size: 100%;
   scroll-behavior: smooth;
 }
 
-.body {
+body {
   display: grid;
   min-block-size: 100%;
   grid-template-rows: auto 1fr;
@@ -24,7 +24,7 @@
   line-height: 143%;
   color: var(--base-black);
   background-color: var(--bg-lightest-grey);
-  overflow-x: hidden; // TODO: не забыть
+  // overflow-x: hidden; // TODO: не забыть
 }
 
 img {

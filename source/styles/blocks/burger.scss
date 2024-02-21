@@ -1,0 +1,53 @@
+@use "../bootstrap.scss" as *;
+
+.burger {
+  @include reset-button;
+  padding: 22px;
+}
+
+.burger__wrapper {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.burger__lines {
+  position: absolute;
+  right: 0;
+  border-top: 2px solid var(--base-black);
+  width: 16px;
+  transition: 0.55s;
+  transition-property: top, transform, opacity;
+
+  &--top {
+    top: 2px;
+  }
+
+  &--middle {
+    top: 7px;
+  }
+
+  &--bottom {
+    top: 12px;
+  }
+}
+
+.burger--active .burger__lines {
+  &--top {
+    top: 7px;
+    transform: rotate(45deg);
+    transition: 0.55s 0.5s;
+    transition-property: top, transform;
+  }
+
+  &--middle {
+    opacity: 0;
+  }
+
+  &--bottom {
+    top: 7px;
+    transform: rotate(-405deg);
+    transition: 0.55s 0.5s;
+    transition-property: top, transform;
+  }
+}
