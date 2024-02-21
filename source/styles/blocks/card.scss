@@ -1,0 +1,138 @@
+@use "../bootstrap.scss" as *;
+
+.card {
+  display: grid;
+  justify-items: center;
+  row-gap: 10px;
+  min-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(2, 600px);
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 476px;
+    order: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    order: 0;
+  }
+}
+
+.card__container {
+  display: grid;
+  justify-items: center;
+
+  @media (min-width: $desktop-width) {
+    justify-items: flex-start;
+    align-content: center;
+  }
+}
+
+.card__label {
+  margin-bottom: 4px;
+  font-weight: var(--fw-bold);
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--base-primary);
+
+  @media (min-width: $desktop-width) {
+    margin-top: -9px;
+    margin-bottom: 3px;
+    letter-spacing: -0.02em;
+    text-align: start;
+  }
+}
+
+.card__title {
+  margin: 0 0 10px;
+  font-weight: var(--fw-bold);
+  font-size: 36px;
+  line-height: 133%;
+  letter-spacing: 0.02em;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 143%;
+    margin: 0 0 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.card__text {
+  margin: 0 0 20px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 160%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 40px;
+    text-align: start;
+  }
+}
+
+.card__wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card__list-price {
+  margin: 0;
+  min-width: 97px;
+}
+
+.card__item-price {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+}
+
+.card__item-old-price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  letter-spacing: 0.03em;
+  color: var(--base-primary);
+}
+
+.card__btn {
+  @include reset-link;
+  padding: 8px 20px;
+  border-radius: 4px;
+  background: var(--base-primary);
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--base-white);
+}

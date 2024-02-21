@@ -60,7 +60,7 @@
             </a>
           </li>
           <li class="custom-menu__item custom-menu__item--burger">
-            <button class="custom-menu__burger burger">
+            <button class="custom-menu__burger burger" type="button">
               <div class="burger__wrapper">
                 <span class="burger__lines burger__lines--top"></span>
                 <span class="burger__lines burger__lines--middle"></span>
@@ -76,13 +76,122 @@
   </header>
 
   <main class="main">
-    <section class="hero" data-test="hero"></section>
+    <section class="hero" data-test="hero">
+      <h2 class="visually-hidden">Новинки напитков.</h2>
+
+
+      <div class="slider">
+        <div class="slider__wrapper">
+
+          <button class="slider__btn slider__btn--left" type="button">
+            <svg class="custom-menu__icon" width="11" height="20" role="img">
+              <use xlink:href="./images/icons/stack.svg#arrow-left"></use>
+            </svg>
+            <span class="visually-hidden">Листать влево.</span>
+          </button>
+
+          <button class="slider__btn slider__btn--right" type="button">
+            <svg class="custom-menu__icon" width="11" height="20" role="img">
+              <use xlink:href="./images/icons/stack.svg#arrow-right"></use>
+            </svg>
+            <span class="visually-hidden">Листать вправо.</span>
+          </button>
+
+          <div class="slider__container">
+            <ul class="slider__list"> <!-- TODO slider__list--move-right && slider__list--move-left -->
+              <li class="slider__item" id="slid-left">
+                <div class="card">
+                  <img class="card__img" src="./images/flat_white_img.png" width="280" height="280" alt="">
+                  <div class="card__container">
+                    <span class="card__label">Новинка!</span>
+                    <h3 class="card__title">Декаф Флэт Уайт</h3>
+                    <p class="card__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
+                      молоком —
+                      то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                    <div class="card__wrapper">
+                      <dl class="card__list-price">
+                        <dt class="visually-hidden">Стоймость</dt>
+                        <dd class="card__item-price">
+                          <s class="card__item-old-price">295₽</s>
+                          <span>225₽</span>
+                        </dd>
+                      </dl>
+                      <a class="card__btn" href="#">Заказать</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="slider__item" id="slid-active">
+                <div class="card">
+                  <img class="card__img" src="./images/flat_white_img.png" width="280" height="280" alt="">
+                  <div class="card__container">
+                    <span class="card__label">Новинка!</span>
+                    <h3 class="card__title">Декаф Флэт Уайт</h3>
+                    <p class="card__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
+                      молоком —
+                      то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                    <div class="card__wrapper">
+                      <dl class="card__list-price">
+                        <dt class="visually-hidden">Стоймость</dt>
+                        <dd class="card__item-price">
+                          <s class="card__item-old-price">295&#8381;</s>
+                          <span>225&#8381;</span>
+                        </dd>
+                      </dl>
+                      <a class="card__btn" href="#">Заказать</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="slider__item" id="slid-right">
+                <div class="card">
+                  <img class="card__img" src="./images/flat_white_img.png" width="280" height="280" alt="">
+                  <div class="card__container">
+                    <span class="card__label">Новинка!</span>
+                    <h3 class="card__title">Декаф Флэт Уайт</h3>
+                    <p class="card__text">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
+                      молоком —
+                      то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                    <div class="card__wrapper">
+                      <dl class="card__list-price">
+                        <dt class="visually-hidden">Стоймость</dt>
+                        <dd class="card__item-price">
+                          <s class="card__item-old-price">295₽</s>
+                          <span>225₽</span>
+                        </dd>
+                      </dl>
+                      <a class="card__btn" href="#">Заказать</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <ol class="slider-pagination">
+          <li class="slider-pagination__item">
+            <button class="slider-pagination__btn slider-pagination__btn--current" type="button"></button>
+          </li>
+          <li class="slider-pagination__item">
+            <button class="slider-pagination__btn" type="button"></button>
+          </li>
+          <li class="slider-pagination__item">
+            <button class="slider-pagination__btn" type="button"></button>
+          </li>
+        </ol>
+
+      </div>
+
+    </section>
+
     <section class="features" data-test="features"></section>
     <section class="catalog" data-test="catalog"></section>
     <article class="map" data-test="map"></article>
   </main>
 
-  <footer class="footer" data-test="footer"></footer>
+  <footer class="footer" data-test="footer">1</footer>
 
   <script src="scripts/index.js">
   </script>

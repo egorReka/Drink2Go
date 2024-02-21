@@ -1,0 +1,34 @@
+@use "../bootstrap.scss" as *;
+
+.slider-pagination {
+  display: none;
+  @include reset-list;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 8px;
+    justify-content: center;
+    width: 202px;
+    margin: 0 auto;
+  }
+}
+
+.slider-pagination__btn {
+  @include reset-button;
+  padding: 10px 0;
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      display: block;
+      width: 62px;
+      height: 4px;
+      background-color: var(--base-white);
+      overflow: hidden;
+      content: "";
+    }
+
+    &--current::before {
+      background-color: var(--base-primary);
+    }
+  }
+}
