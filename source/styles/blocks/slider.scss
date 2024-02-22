@@ -3,6 +3,10 @@
 .slider {
   display: grid;
   row-gap: 10px;
+
+  @media (min-width: $desktop-width) {
+    row-gap: 0;
+  }
 }
 
 .slider__wrapper {
