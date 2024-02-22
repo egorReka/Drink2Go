@@ -1,0 +1,49 @@
+.title {
+  font-weight: var(--fw-bold);
+
+  &--primary {
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 42px;
+      line-height: 150%;
+    }
+  }
+
+  &--secondary {
+    font-size: 18px;
+    line-height: 178%;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 150%;
+    }
+  }
+
+  &--label {
+    font-size: 12px;
+    line-height: 133%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--base-primary);
+  }
+
+  &--slider {
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 56px;
+      line-height: 143%;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: start;
+    }
+  }
+}

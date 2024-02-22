@@ -1,0 +1,29 @@
+@use "../../bootstrap.scss" as *;
+
+.button {
+  @include reset-button;
+  border-radius: 4px;
+  padding: 8px 20px;
+  background-color: var(--base-primary);
+  color: var(--base-white);
+
+  &--primary {
+    min-width: 141px;
+    font-size: 14px;
+    line-height: 143%;
+  }
+
+  &--secondary {
+    min-width: 137px;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  &--slider {
+    min-width: 113px;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+  }
+}

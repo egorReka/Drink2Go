@@ -1,0 +1,41 @@
+.text {
+  &--label {
+    font-weight: var(--fw-bold);
+    font-size: 12px;
+    line-height: 133%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--base-primary);
+
+    @media (min-width: $desktop-width) {
+      text-align: start;
+    }
+  }
+
+  &--slider {
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 160%;
+    }
+
+    @media (min-width: $desktop-width) {
+      text-align: start;
+    }
+  }
+
+  &--price {
+    font-weight: var(--fw-semibold);
+    font-size: 20px;
+    line-height: 160%;
+  }
+
+  &--old-price {
+    font-size: 16px;
+    line-height: 200%;
+    letter-spacing: 0.03em;
+    color: var(--base-primary);
+  }
+}
