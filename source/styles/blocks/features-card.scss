@@ -1,0 +1,91 @@
+.features-card {
+  display: grid;
+  justify-items: center;
+  row-gap: 10px;
+
+  &::before {
+    display: block;
+    width: 52px;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+  }
+
+  &--speed::before {
+    background-image: url("../../images/icons/stack.svg#speed");
+
+    @media (min-width: $tablet-width) {
+      margin: 4px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
+  }
+
+  &--comfort::before {
+    background-image: url("../../images/icons/stack.svg#comfort");
+  }
+
+  &--cheerfulness::before {
+    background-image: url("../../images/icons/stack.svg#cheerfulness");
+  }
+
+  &--ecology::before {
+    background-image: url("../../images/icons/stack.svg#ecology");
+
+    @media (min-width: $tablet-width) {
+      margin: 4px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}
+
+.features-card__title {
+  margin: 0 0 4px;
+  font-weight: var(--fw-bold);
+  font-size: 18px;
+  line-height: 178%;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 11px;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
+
+.features-card__text {
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
