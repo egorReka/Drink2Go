@@ -1,0 +1,48 @@
+@use "../bootstrap.scss" as *;
+
+.filter-country__list {
+  @include reset-list;
+  display: grid;
+  row-gap: 20px;
+}
+
+
+.filter-country__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.filter-country__input {
+  &:checked + .filter-country__mark {
+    background-color: var(--base-primary);
+    border-color: var(--base-primary);
+    justify-content: end;
+  }
+}
+
+.filter-country__mark {
+  display: grid;
+  align-items: center;
+  justify-content: start;
+  width: 42px;
+  height: 24px;
+  border: 2px solid var(--base-grey);
+  border-radius: 12px;
+  background-color: var(--base-grey);
+
+  &::after {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--base-white);
+    content: "";
+  }
+}
+
+.filter-country__label {
+  font-size: 16px;
+  line-height: 150%;
+}
+

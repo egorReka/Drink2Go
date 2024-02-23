@@ -1,0 +1,66 @@
+@use "../bootstrap.scss" as *;
+
+.catalog-card {
+  display: grid;
+  padding: 20px;
+  background-color: var(--base-white);
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+  }
+}
+
+.catalog-card__link {
+  @include reset-link;
+  padding-top: 20px;
+}
+
+.catalog-card__img {
+  display: block;
+  margin: 0 auto 24px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 30px;
+  }
+}
+
+.catalog-card__title {
+  margin: 0 0 4px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 10px;
+  }
+}
+
+.catalog-card__text {
+  margin: 0 0 16px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px;
+  }
+}
+
+.catalog-card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.catalog-card__button {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+
+  &::before {
+    display: block;
+    width: 20px;
+    height: 16px;
+    background-image: url("../../images/icons/stack.svg#catalog-union");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+  }
+}

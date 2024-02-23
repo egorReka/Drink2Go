@@ -2,6 +2,7 @@
 
 .features {
   padding: 50px 0 60px;
+  background-color: var(--base-white);
 
   @media (min-width: $tablet-width) {
     padding: 60px 0 100px;
@@ -36,17 +37,17 @@
 .features__list {
   @include reset-list;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 339px));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 339px));
   justify-content: center;
   row-gap: 32px;
   column-gap: 30px;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: repeat(auto-fill, 339px);
+    grid-template-columns: repeat(auto-fit, 339px);
     row-gap: 50px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: repeat(auto-fill, 317px);
+    grid-template-columns: repeat(auto-fit, 317px);
   }
 }

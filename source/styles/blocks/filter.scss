@@ -1,0 +1,25 @@
+@use "../bootstrap.scss" as *;
+
+.filter__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
+  justify-content: center;
+  gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 30px;
+  }
+}
+
+.filter__title {
+  margin: 0 0 20px;
+  font-weight: var(--fw-semibold);
+  font-size: 16px;
+  line-height: 150%;
+}
+

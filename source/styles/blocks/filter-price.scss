@@ -1,0 +1,70 @@
+@use "../bootstrap.scss" as *;
+
+.filter-price__slider {
+  width: 100%;
+  padding: 2px 0;
+  margin-bottom: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.filter-price__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5px;
+
+  &::after {
+    display: block;
+    min-width: 8px;
+    height: 2px;
+    background-color: var(--base-grey);
+    content: "";
+
+    @media (min-width: $desktop-width) {
+      min-width: 10px;
+    }
+  }
+}
+
+.filter-price__input {
+  min-width: 118px;
+  height: 40px;
+  border: 2px solid var(--alt-primary-lighter);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-weight: var(--fw-medium);
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--base-black);
+
+  &::placeholder {
+    color: var(--base-grey);
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 134px;
+  }
+}
+
+.filter-price__input-wrapper {
+  &--min {
+    order: -1;
+  }
+
+  &--max {
+    order: 1;
+  }
+}

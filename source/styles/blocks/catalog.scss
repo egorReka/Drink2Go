@@ -1,0 +1,84 @@
+@use "../bootstrap.scss" as *;
+
+.catalog {
+  padding: 50px 0 44px;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 0 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 100px 0 120px;
+  }
+}
+
+.catalog__wrapper {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
+  }
+}
+
+.catalog__header {
+  @media (min-width: $desktop-width) {
+    grid-column: -1 / 1;
+  }
+}
+
+.catalog__container {
+  display: grid;
+}
+
+.catalog__title {
+  margin: 0 0 4px;
+}
+
+.catalog__text {
+  margin: 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 36px;
+  }
+}
+
+.catalog__filter {
+  margin-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 4px;
+  }
+}
+
+.catalog__sorting {
+  justify-self: center;
+  margin: 0 0 16px;
+
+  @media (min-width: $tablet-width) {
+    justify-self: end;
+    margin: 0 0 26px;
+  }
+}
+
+.catalog__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+

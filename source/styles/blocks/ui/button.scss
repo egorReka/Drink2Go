@@ -6,6 +6,20 @@
   padding: 8px 20px;
   background-color: var(--base-primary);
   color: var(--base-white);
+  font-family: inherit;
+
+  &:hover,
+  &:focus {
+    background-color: var(--alt-primary-lighter);
+  }
+
+  &:active {
+    background-color: var(--alt-primary-darker);
+  }
+
+  &:disabled {
+    background-color: var(--base-grey);
+  }
 
   &--primary {
     min-width: 141px;
@@ -25,5 +39,32 @@
     font-size: 16px;
     line-height: 150%;
     text-align: center;
+  }
+
+  &--additional {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  &--reset {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--base-primary);
+    background-color: var(--base-white);
+
+    &:hover,
+    &:focus {
+      color: var(--base-white);
+    }
+
+    &:active {
+      color: var(--base-white);
+    }
+
+    &:disabled {
+      background-color: var(--alt-light-grey);
+    }
   }
 }

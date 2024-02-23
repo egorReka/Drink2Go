@@ -1,0 +1,40 @@
+@use "../bootstrap.scss" as *;
+
+.filter-milk__list {
+  @include reset-list;
+  display: grid;
+  row-gap: 20px;
+}
+
+
+.filter-milk__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.filter-milk__input {
+  &:checked + .filter-milk__mark::after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--base-primary);
+    content: "";
+  }
+}
+
+.filter-milk__mark {
+  display: grid;
+  place-content: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--base-primary);
+  border-radius: 50%;
+  background-color: var(--base-white);
+}
+
+.filter-milk__label {
+  font-size: 16px;
+  line-height: 150%;
+}

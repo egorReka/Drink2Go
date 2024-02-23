@@ -1,0 +1,77 @@
+@use "../global/variables.scss" as *;
+
+.pagination {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-self: end;
+  column-gap: 20px;
+  max-width: 395px;
+}
+
+.pagination__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.pagination__button {
+  display: grid;
+  place-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 8px 15px;
+  font-family: inherit;
+  font-weight: var(--fw-regular);
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: var(--base-primary);
+  border: none;
+  border-radius: 4px;
+  background-color: var(--base-white);
+
+  &--current {
+    font-weight: var(--fw-semibold);
+    background-color: transparent;
+    color: var(--base-black);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--alt-primary-lighter);
+    color: var(--base-white);
+  }
+
+  &:active {
+    background: var(--alt-primary-darker);
+  }
+
+  &:disabled {
+    background: var(--alt-light-grey);
+    color: var(--base-white);
+  }
+
+  @media (min-width: $tablet-width) {
+    &--flip {
+      padding: 8px 20px;
+    }
+  }
+}
+
+.pagination__button-text {
+  position: fixed;
+  transform: scale(0);
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    transform: none;
+  }
+}
+
+.pagination__button-icon {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
