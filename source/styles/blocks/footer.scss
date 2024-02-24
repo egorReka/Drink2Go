@@ -10,7 +10,6 @@
 }
 
 .footer__wrapper {
-
   @media (min-width: $desktop-width) {
     display: flex;
     gap: 30px;
@@ -19,28 +18,12 @@
 }
 
 .footer__header {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 20px 0 21px;
-
-  &::after {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: calc(-100vw / 2 + 100% / 2);
-    right: calc(-100vw / 2 + 100% / 2);
-    height: 1px;
-    background-color: var(--base-secondary);
-    content: "";
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
+  padding: 20px;
 
   @media (min-width: $tablet-width) {
     padding: 40px 0 30px;
@@ -88,31 +71,17 @@
 }
 
 .footer__item {
-  position: relative;
-  padding: 20px 0 21px;
+  padding: 21px 20px 20px;
+  outline: 1px solid var(--base-secondary);
 
   &--contacts {
-    padding: 20px 0 17px;
-  }
-
-  &::after {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: calc(-100vw / 2 + 100% / 2);
-    right: calc(-100vw / 2 + 100% / 2);
-    height: 1px;
-    background-color: var(--base-secondary);
-    content: "";
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
+    padding: 21px 20px 17px;
   }
 
   @media (min-width: $tablet-width) {
     width: 222px;
     padding: 0;
+    outline: none;
   }
 
   @media (min-width: $desktop-width) {

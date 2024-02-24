@@ -18,34 +18,3 @@
   color: inherit;
   text-decoration: none;
 }
-
-@mixin full-width-vw {
-  margin-left: calc(-100vw / 2 + 100% / 2);
-  margin-right: calc(-100vw / 2 + 100% / 2);
-}
-
-@mixin pseudo(
-  $width: 100%,
-  $height: 100%,
-  $bg-color: transparent,
-  $display: block,
-  $position: absolute,
-  $content: ""
-) {
-  display: $display;
-  position: $position;
-  width: $width;
-  height: $height;
-  background-color: $bg-color;
-  content: $content;
-}
-
-@mixin transition(
-  $transition-duration: 0.2s,
-  $transition-property: all,
-  $transition-timing-function: linear
-) {
-  transition-duration: $transition-duration;
-  transition-property: $transition-property;
-  transition-timing-function: $transition-timing-function;
-}
