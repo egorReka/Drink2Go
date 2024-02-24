@@ -27,6 +27,15 @@
   column-gap: 8px;
   padding: 22px;
 
+  &:hover,
+  &:focus {
+    color: var(--base-primary);
+  }
+
+  &:active {
+    background-color: var(--base-secondary);
+  }
+
   @media (min-width: $tablet-width) {
     padding: 32px 22px;
   }

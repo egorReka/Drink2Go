@@ -8,6 +8,16 @@
   @media (min-width: $tablet-width) {
     padding: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    &--hover {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &:hover {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
 }
 
 .catalog-card__link {

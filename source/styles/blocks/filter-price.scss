@@ -36,6 +36,7 @@
 .filter-price__input {
   min-width: 118px;
   height: 40px;
+  outline: none;
   border: 2px solid var(--alt-primary-lighter);
   border-radius: 4px;
   padding: 8px 10px;
@@ -56,6 +57,16 @@
 
   @media (min-width: $desktop-width) {
     min-width: 134px;
+  }
+
+  &:focus {
+    border-color: var(--alt-primary-darker);
+  }
+
+  &:disabled {
+    border-color: var(--alt-light-grey);
+    background-color: var(--bg-lightest-grey);
+    color: var(--base-grey);
   }
 }
 

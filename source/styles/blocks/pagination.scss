@@ -45,11 +45,11 @@
   }
 
   &:active {
-    background: var(--alt-primary-darker);
+    background-color: var(--alt-primary-darker);
   }
 
   &:disabled {
-    background: var(--alt-light-grey);
+    background-color: var(--alt-light-grey);
     color: var(--base-white);
   }
 

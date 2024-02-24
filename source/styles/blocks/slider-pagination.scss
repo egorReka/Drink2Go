@@ -30,5 +30,14 @@
     &--current::before {
       background-color: var(--base-primary);
     }
+
+    &:hover::before,
+    &:focus::before {
+      background-color: var(--alt-primary-opacity-0_25);
+    }
+
+    &:active::before {
+      background-color: var(--base-primary);
+    }
   }
 }

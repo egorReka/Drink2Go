@@ -19,6 +19,7 @@
 
   &:disabled {
     background-color: var(--base-grey);
+    cursor: default;
   }
 
   &--primary {
@@ -65,6 +66,8 @@
 
     &:disabled {
       background-color: var(--alt-light-grey);
+      color: var(--base-white);
+      cursor: default;
     }
   }
 }

@@ -3,6 +3,10 @@
 .burger {
   @include reset-button;
   padding: 22px;
+
+  &:active {
+    background-color: var(--base-secondary);
+  }
 }
 
 .burger__wrapper {

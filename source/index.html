@@ -19,13 +19,13 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="images/logo-big.svg" width="202" height="59">
               <source media="(min-width: 768px)" srcset="images/logo-medium.svg" width="174" height="50">
-              <img class="logo__image" src="./images/logo-small.svg" width="33" height="38"
-                alt="Интеренет-магазин Drink2Go.">
+              <img class="logo__image" src="./images/logo-small.svg" width="33" height="38" alt="Drink2Go.">
             </picture>
           </a>
           <h1 class="logo__title">Интернет-магазин кофейных напитков</h1>
         </div>
 
+        <!-- TODO nav--active открывает меню -->
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -45,17 +45,18 @@
 
         <ul class="custom-menu">
           <li class="custom-menu__item">
-            <a class="custom-menu__link" href="#" aria-hidden="true" focusable="false">
-              <svg class="custom-menu__icon" width="16" height="16" role="img">
+            <a class="custom-menu__link" href="#">
+              <!-- TODO проверить aria focusable -->
+              <svg class="custom-menu__icon" width="16" height="16">
                 <use xlink:href="./images/icons/stack.svg#user"></use>
               </svg>
               <p class="custom-menu__text">Войти</p>
             </a>
           </li>
           <li class="custom-menu__item">
-            <a class="custom-menu__link" href="#" aria-hidden="true" focusable="false">
-              <svg class="custom-menu__icon" width="16" height="16" role="img">
-                <use xlink:href="./images/icons/stack.svg#union"></use>
+            <a class="custom-menu__link" href="#">
+              <svg class="custom-menu__icon" width="16" height="16">
+                <use xlink:href="./images/icons/stack.svg#basket"></use>
               </svg>
               <p class="custom-menu__text">Корзина</p>
             </a>
@@ -67,7 +68,8 @@
                 <span class="burger__lines burger__lines--middle"></span>
                 <span class="burger__lines burger__lines--bottom"></span>
               </div>
-              <span class="visually-hidden">Открыть меню.</span> <!-- TODO Сменить textContent -->
+              <!-- TODO Сменить textContent -->
+              <span class="visually-hidden">Открыть меню.</span>
             </button>
           </li>
         </ul>
@@ -80,26 +82,26 @@
     <section class="hero" data-test="hero">
       <h2 class="visually-hidden">Новинки напитков.</h2>
 
-
       <div class="slider">
         <div class="slider__wrapper">
 
           <button class="slider__btn slider__btn--left" type="button">
-            <svg class="custom-menu__icon" width="11" height="20" role="img">
-              <use xlink:href="./images/icons/stack.svg#arrow-left"></use>
+            <svg class="custom-menu__icon" width="11" height="20">
+              <use xlink:href="images/icons/stack.svg#arrow-left"></use>
             </svg>
             <span class="visually-hidden">Листать влево.</span>
           </button>
 
           <button class="slider__btn slider__btn--right" type="button">
-            <svg class="custom-menu__icon" width="11" height="20" role="img">
-              <use xlink:href="./images/icons/stack.svg#arrow-right"></use>
+            <svg class="custom-menu__icon" width="11" height="20">
+              <use xlink:href="images/icons/stack.svg#arrow-right"></use>
             </svg>
             <span class="visually-hidden">Листать вправо.</span>
           </button>
 
           <div class="slider__container">
-            <ul class="slider__list"> <!-- TODO slider__list--move-right && slider__list--move-left -->
+            <!-- TODO slider__list--move-right && slider__list--move-left -->
+            <ul class="slider__list">
               <li class="slider__item" id="slid-left">
                 <div class="slider-card">
                   <img class="slider-card__img" src="./images/flat_white_img.png" width="280" height="280" alt="">
@@ -119,7 +121,8 @@
                           <span class="text text--price">225₽</span>
                         </dd>
                       </dl>
-                      <a class="slider-card__btn button button--slider" href="#">Заказать</a>
+                      <!-- TODO убрать tabindex -->
+                      <a class="slider-card__btn button button--slider" href="#" tabindex="-1">Заказать</a>
                     </div>
                   </div>
                 </div>
@@ -167,7 +170,8 @@
                           <span class="text text--price">225₽</span>
                         </dd>
                       </dl>
-                      <a class="slider-card__btn button button--slider" href="#">Заказать</a>
+                      <!-- TODO убрать tabindex -->
+                      <a class="slider-card__btn button button--slider" href="#" tabindex="-1">Заказать</a>
                     </div>
                   </div>
                 </div>
@@ -190,7 +194,6 @@
         </ol>
 
       </div>
-
     </section>
 
     <section class="features" data-test="features">
@@ -305,7 +308,8 @@
                     </li>
                     <li class="filter-milk__item">
                       <label class="filter-milk__wrapper">
-                        <input class="visually-hidden filter-milk__input" type="radio" name="milk" value="Without milk">
+                        <input class="visually-hidden filter-milk__input" type="radio" name="milk" value="Without milk"
+                          disabled>
                         <span class="filter-milk__mark"></span>
                         <span class="filter-milk__label">Без молока</span>
                       </label>
@@ -350,7 +354,7 @@
                     </li>
                     <li class="filter-country__item">
                       <label class="filter-country__wrapper">
-                        <input class="visually-hidden filter-country__input" type="checkbox" name="Peru">
+                        <input class="visually-hidden filter-country__input" type="checkbox" name="Peru" disabled>
                         <span class="filter-country__mark"></span>
                         <span class="filter-country__label">Перу</span>
                       </label>
@@ -381,7 +385,21 @@
             <ul class="catalog__list">
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="" class="catalog-card__link">
+                  <a href="#" class="catalog-card__link">
+                    <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
+                      alt="">
+                    <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
+                  </a>
+                  <p class="catalog-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
+                  <div class="catalog-card__wrapper">
+                    <span class="catalog-card__price text text--price">225₽</span>
+                    <button class="catalog-card__button button button--primary" type="button">В корзину</button>
+                  </div>
+                </div>
+              </li>
+              <li class="catalog__item">
+                <div class="catalog-card catalog-card--hover">
+                  <a href="#" class="catalog-card__link">
                     <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
                       alt="">
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
@@ -395,7 +413,7 @@
               </li>
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="" class="catalog-card__link">
+                  <a href="#" class="catalog-card__link">
                     <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
                       alt="">
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
@@ -409,7 +427,7 @@
               </li>
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="" class="catalog-card__link">
+                  <a href="#" class="catalog-card__link">
                     <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
                       alt="">
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
@@ -423,7 +441,7 @@
               </li>
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="" class="catalog-card__link">
+                  <a href="#" class="catalog-card__link">
                     <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
                       alt="">
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
@@ -437,21 +455,7 @@
               </li>
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="" class="catalog-card__link">
-                    <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
-                      alt="">
-                    <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
-                  </a>
-                  <p class="catalog-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
-                  <div class="catalog-card__wrapper">
-                    <span class="catalog-card__price text text--price">225₽</span>
-                    <button class="catalog-card__button button button--primary" type="button">В корзину</button>
-                  </div>
-                </div>
-              </li>
-              <li class="catalog__item">
-                <div class="catalog-card">
-                  <a href="" class="catalog-card__link">
+                  <a href="#" class="catalog-card__link">
                     <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
                       alt="">
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
@@ -510,8 +514,6 @@
           alt="Расположение на карте.">
       </picture>
     </article>
-
-    <!-- <div class="container"> -->
 
     <div class="footer__wrapper">
 
@@ -596,8 +598,8 @@
                 реки Карповки, дом 5</address>
             </li>
             <li class="footer__list-item">
-              <a class="footer__list-contacts footer__list-contacts--tel" href="tel:+79999999999">+7 (999)
-                999-99-99</a>
+              <a class="footer__list-contacts footer__list-contacts--tel" href="tel:+79999999999">+7
+                (999) 999-99-99</a>
             </li>
           </ul>
         </div>
@@ -614,7 +616,6 @@
       </svg>
     </a>
 
-    <!-- </div> -->
   </footer>
 
   <script src="scripts/index.js"></script>
