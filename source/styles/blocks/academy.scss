@@ -1,0 +1,20 @@
+@use "../bootstrap.scss" as *;
+
+.academy {
+  @include reset-link;
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+  font-size: 12px;
+  line-height: 133%;
+  color: var(--base-grey);
+
+  &:hover,
+  &:focus {
+    color: var(--base-primary);
+  }
+
+  &:active {
+    color: var(--alt-primary-darker);
+  }
+}

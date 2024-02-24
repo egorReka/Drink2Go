@@ -1,0 +1,20 @@
+@use "../bootstrap.scss" as *;
+
+.social {
+  @include reset-list;
+  display: flex;
+  gap: 20px;
+}
+
+.social__link {
+  @include reset-link;
+  display: grid;
+  place-content: center;
+  padding: 10px;
+  color: var(--base-grey);
+
+  &:hover,
+  &:focus {
+    color: var(--base-primary);
+  }
+}

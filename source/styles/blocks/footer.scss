@@ -1,0 +1,193 @@
+@use "../bootstrap.scss" as *;
+
+.footer {
+  background-color: var(--base-white);
+  padding-bottom: 10px;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.footer__wrapper {
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    gap: 30px;
+    padding-top: 40px;
+  }
+}
+
+.footer__header {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 20px 0 21px;
+
+  &::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: calc(-100vw / 2 + 100% / 2);
+    right: calc(-100vw / 2 + 100% / 2);
+    height: 1px;
+    background-color: var(--base-secondary);
+    content: "";
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    width: 318px;
+    padding: 0;
+  }
+}
+
+.footer__logo {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__logo-text {
+  position: fixed;
+  transform: scale(0);
+  margin: 0 0 50px;
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    transform: none;
+  }
+}
+
+.footer__logo-image {
+  display: block;
+}
+
+
+.footer__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.footer__item {
+  position: relative;
+  padding: 20px 0 21px;
+
+  &--contacts {
+    padding: 20px 0 17px;
+  }
+
+  &::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: calc(-100vw / 2 + 100% / 2);
+    right: calc(-100vw / 2 + 100% / 2);
+    height: 1px;
+    background-color: var(--base-secondary);
+    content: "";
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 222px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 317px;
+    padding-top: 9px;
+  }
+}
+
+.footer__list-title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.02em;
+  color: var(--base-primary);
+}
+
+.footer__list {
+  @include reset-list;
+  display: grid;
+  row-gap: 4px
+}
+
+.footer__list-link {
+  @include reset-link;
+  display: block;
+  padding: 8px 0;
+  font-weight: var(--fw-medium);
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+
+.footer__list-contacts {
+  display: flex;
+  column-gap: 6px;
+  padding: 8px 0 4px;
+  font-size: 14px;
+  line-height: 143%;
+  font-style: normal;
+  color: var(--base-black);
+  text-decoration: none;
+
+
+  &::before {
+    display: grid;
+    min-width: 13px;
+    height: 16px;
+    margin-top: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: "";
+  }
+
+  &--address::before {
+    background-image: url("../../images/icons/stack.svg#point");
+  }
+
+  &--tel::before {
+    background-image: url("../../images/icons/stack.svg#phone");
+  }
+}
+
+.footer__academy {
+  display: grid;
+  place-content: center;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 20px 0;
+  }
+}

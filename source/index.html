@@ -17,9 +17,9 @@
         <div class="logo">
           <a class="logo__link"> <!-- TODO href -->
             <picture>
-              <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="202" height="59">
-              <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="174" height="50">
-              <img class="logo__image" src="./images/logo-mobile.svg" width="33" height="38"
+              <source media="(min-width: 1440px)" srcset="images/logo-big.svg" width="202" height="59">
+              <source media="(min-width: 768px)" srcset="images/logo-medium.svg" width="174" height="50">
+              <img class="logo__image" src="./images/logo-small.svg" width="33" height="38"
                 alt="Интеренет-магазин Drink2Go.">
             </picture>
           </a>
@@ -501,10 +501,120 @@
 
   </main>
 
-  <footer class="footer" data-test="footer" style="height: 300px;">
-    <article class="map" data-test="map">
+  <footer class="footer" data-test="footer">
 
+    <article class="map" data-test="map">
+      <picture>
+        <!-- <source srcset="images/map.webp 1x, images/map@2x.webp 2x" type="image/webp" width="320" height="420"> -->
+        <img class="map__img" src="images/map.png" srcset="images/map@2x.png 2x" width="320" height="420"
+          alt="Расположение на карте.">
+      </picture>
     </article>
+
+    <div class="container">
+
+      <div class="footer__wrapper">
+
+        <header class="footer__header">
+          <h2 class="visually-hidden">Информация о нас.</h2>
+          <a class="footer__logo" href="#">
+            <picture>
+              <source media="(min-width: 768px)" srcset="images/logo-big.svg" width="170" height="36">
+              <img class="footer__logo-image" src="images/logo-medium.svg" width="82" height="36"
+                alt="Интеренет-магазин Drink2Go.">
+            </picture>
+          </a>
+          <p class="footer__logo-text">Интернет-магазин кофейных напитков</p>
+          <ul class="footer__social social">
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Страница в Вконтакте.">
+                <svg class="social__icon" role="img" width="20" height="20">
+                  <use href="images/icons/stack.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Страница в Пинтерест.">
+                <svg class="social__icon" role="img" width="20" height="20">
+                  <use href="images/icons/stack.svg#pinterest"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" aria-label="Чат в Одноклассниках">
+                <svg class="social__icon" role="img" width="20" height="20">
+                  <use href="images/icons/stack.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </header>
+
+        <div class="footer__container">
+
+          <div class="footer__item">
+            <h3 class="footer__list-title">Интернет-магазин</h3>
+
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Каталог</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Доставка</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Способы оплаты</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">О нас</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__item">
+            <h3 class="footer__list-title">Медиа</h3>
+
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Блог</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Информация для СМИ</a>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-link" href="#">Правовая информация</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__item footer__item--contacts">
+            <h3 class="footer__list-title">Контакты</h3>
+
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <address class="footer__list-contacts footer__list-contacts--address">Санкт-Петербург, набережная
+                  реки Карповки, дом 5</address>
+              </li>
+              <li class="footer__list-item">
+                <a class="footer__list-contacts footer__list-contacts--tel" href="tel:+79999999999">+7 (999)
+                  999-99-99</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+      <a class="footer__academy academy" href="https://htmlacademy.ru/intensive/adaptive"
+        aria-label="HTML и CSS. Адаптивная вёрстка и автоматизация.">
+        <span class="academy__text">Разработано в HTML Academy</span>
+        <svg class="academy__logo" role="img" width="12" height="16">
+          <use href="images/icons/stack.svg#logo-academy"></use>
+        </svg>
+      </a>
+
+    </div>
   </footer>
 
   <script src="scripts/index.js"></script>
