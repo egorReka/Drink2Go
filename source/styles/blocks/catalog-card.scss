@@ -27,6 +27,8 @@
 
 .catalog-card__img {
   display: block;
+  width: 130px;
+  height: 188px;
   margin: 0 auto 24px;
 
   @media (min-width: $tablet-width) {

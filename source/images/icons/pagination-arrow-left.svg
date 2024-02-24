@@ -1,3 +1,1 @@
-<svg id="pagination-arrow-left" width="10" height="10" viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5.80847 -5.20835e-08L7 1.23899L3.38306 5L7 8.76101L5.80847 10L1 5L5.80847 -5.20835e-08Z"/>
-</svg>
+<svg viewBox="0 0 10 10" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="m5.8 0 1.2 1.24-3.62 3.76 3.62 3.76-1.2 1.24-4.8-5 4.8-5Z"/></svg>

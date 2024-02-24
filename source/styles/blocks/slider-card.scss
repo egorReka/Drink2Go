@@ -17,6 +17,16 @@
   }
 }
 
+.slider-card__img-wrapper {
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+  }
+}
+
 .slider-card__img {
   display: block;
   width: 100%;
@@ -24,12 +34,10 @@
 
   @media (min-width: $tablet-width) {
     width: 476px;
-    order: 1;
   }
 
   @media (min-width: $desktop-width) {
     width: 600px;
-    order: 0;
   }
 }
 

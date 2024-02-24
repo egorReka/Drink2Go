@@ -5,8 +5,16 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="fonts/montserrat-v26-cyrillic_latin-400.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-v26-cyrillic_latin-700.woff2" as="font" type="font/woff2"
+    crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
+  <link rel="stylesheet" href="vendor/nouislider/nouislider.css"> <!-- TODO не забыть -->
 </head>
 
 <body class="page__body">
@@ -104,15 +112,33 @@
             <ul class="slider__list">
               <li class="slider__item" id="slid-left">
                 <div class="slider-card">
-                  <img class="slider-card__img" src="./images/flat_white_img.png" width="280" height="280" alt="">
+                  <div class="slider-card__img-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="images/slider/hero-desktop-espresso@1x.webp 1x, images/slider/hero-desktop-espresso@2x.webp 2x"
+                        type="image/webp" width="600" height="600">
+                      <source media="(min-width: 768px)"
+                        srcset="images/slider/hero-tablet-espresso@1x.webp 1x, images/slider/hero-tablet-espresso@2x.webp 2x"
+                        type="image/webp" width="476" height="476">
+                      <source
+                        srcset="images/slider/hero-mobile-espresso@1x.webp 1x, images/slider/hero-mobile-espresso@2x.webp 2x"
+                        type="image/webp" width="280" height="280">
+                      <source media="(min-width: 1440px)"
+                        srcset="images/slider/hero-desktop-espresso@1x.png.png 1x, images/slider/hero-desktop-espresso@2x.png 2x"
+                        type="image/png" width="600" height="600">
+                      <source media="(min-width: 768px)"
+                        srcset="images/slider/hero-tablet-espresso@1x.png 1x, images/slider/hero-tablet-espresso@2x.png 2x"
+                        type="image/png" width="476" height="476">
+                      <img class="slider-card__img" src="images/slider/hero-mobile-espresso@1x.png"
+                        srcset="images/slider/hero-mobile-espresso@2x.png 2x" width="280" height="280" alt="">
+                    </picture>
+                  </div>
                   <div class="slider-card__container">
                     <span class="slider-card__label text text--label">Новинка!</span>
                     <h3 class="slider-card__title title title--slider">Декаф Флэт Уайт</h3>
                     <p class="slider-card__text text text--slider">Свежесваренный кофе без кофеина из Эфиопии
-                      с&nbsp;натуральным
-                      фермерским
-                      молоком —
-                      то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                      с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого
+                      рабочего дня</p>
                     <div class="slider-card__wrapper">
                       <dl class="slider-card__list-price">
                         <dt class="visually-hidden">Стоймость</dt>
@@ -129,15 +155,33 @@
               </li>
               <li class="slider__item" id="slid-active">
                 <div class="slider-card">
-                  <img class="slider-card__img" src="./images/flat_white_img.png" width="280" height="280" alt="">
+                  <div class="slider-card__img-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="images/slider/hero-desktop-flat-white@1x.webp 1x, images/slider/hero-desktop-flat-white@2x.webp 2x"
+                        type="image/webp" width="600" height="600">
+                      <source media="(min-width: 768px)"
+                        srcset="images/slider/hero-tablet-flat-white@1x.webp 1x, images/slider/hero-tablet-flat-white@2x.webp 2x"
+                        type="image/webp" width="476" height="476">
+                      <source
+                        srcset="images/slider/hero-mobile-flat-white@1x.webp 1x, images/slider/hero-mobile-flat-white@2x.webp 2x"
+                        type="image/webp" width="280" height="280">
+                      <source media="(min-width: 1440px)"
+                        srcset="images/slider/hero-desktop-flat-white@1x.png.png 1x, images/slider/hero-desktop-flat-white@2x.png 2x"
+                        type="image/png" width="600" height="600">
+                      <source media="(min-width: 768px)"
+                        srcset="images/slider/hero-tablet-flat-white@1x.png 1x, images/slider/hero-tablet-flat-white@2x.png 2x"
+                        type="image/png" width="476" height="476">
+                      <img class="slider-card__img" src="images/slider/hero-mobile-flat-white@1x.png"
+                        srcset="images/slider/hero-mobile-flat-white@2x.png 2x" width="280" height="280" alt="">
+                    </picture>
+                  </div>
                   <div class="slider-card__container">
                     <span class="slider-card__label text text--label">Новинка!</span>
                     <h3 class="slider-card__title title title--slider">Декаф Флэт Уайт</h3>
                     <p class="slider-card__text text text--slider">Свежесваренный кофе без кофеина из Эфиопии
-                      с&nbsp;натуральным
-                      фермерским
-                      молоком —
-                      то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                      с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого
+                      рабочего дня</p>
                     <div class="slider-card__wrapper">
                       <dl class="slider-card__list-price">
                         <dt class="visually-hidden">Стоймость</dt>
@@ -153,15 +197,33 @@
               </li>
               <li class="slider__item" id="slid-right">
                 <div class="slider-card">
-                  <img class="slider-card__img" src="./images/flat_white_img.png" width="280" height="280" alt="">
+                  <div class="slider-card__img-wrapper">
+                    <picture>
+                      <source media="(min-width: 1440px)"
+                        srcset="images/slider/hero-desktop-lavender@1x.webp 1x, images/slider/hero-desktop-lavender@2x.webp 2x"
+                        type="image/webp" width="600" height="600">
+                      <source media="(min-width: 768px)"
+                        srcset="images/slider/hero-tablet-lavender@1x.webp 1x, images/slider/hero-tablet-lavender@2x.webp 2x"
+                        type="image/webp" width="476" height="476">
+                      <source
+                        srcset="images/slider/hero-mobile-lavender@1x.webp 1x, images/slider/hero-mobile-lavender@2x.webp 2x"
+                        type="image/webp" width="280" height="280">
+                      <source media="(min-width: 1440px)"
+                        srcset="images/slider/hero-desktop-lavender@1x.png.png 1x, images/slider/hero-desktop-lavender@2x.png 2x"
+                        type="image/png" width="600" height="600">
+                      <source media="(min-width: 768px)"
+                        srcset="images/slider/hero-tablet-lavender@1x.png 1x, images/slider/hero-tablet-lavender@2x.png 2x"
+                        type="image/png" width="476" height="476">
+                      <img class="slider-card__img" src="images/slider/hero-mobile-lavender@1x.png"
+                        srcset="images/slider/hero-mobile-lavender@2x.png 2x" width="280" height="280" alt="">
+                    </picture>
+                  </div>
                   <div class="slider-card__container">
                     <span class="slider-card__label text text--label">Новинка!</span>
                     <h3 class="slider-card__title title title--slider">Декаф Флэт Уайт</h3>
                     <p class="slider-card__text text text--slider">Свежесваренный кофе без кофеина из Эфиопии
-                      с&nbsp;натуральным
-                      фермерским
-                      молоком —
-                      то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+                      с&nbsp;натуральным фермерским молоком — то, что нужно для&nbsp;расслабления после тяжёлого
+                      рабочего дня</p>
                     <div class="slider-card__wrapper">
                       <dl class="slider-card__list-price">
                         <dt class="visually-hidden">Стоймость</dt>
@@ -386,8 +448,12 @@
               <li class="catalog__item">
                 <div class="catalog-card">
                   <a href="#" class="catalog-card__link">
-                    <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
-                      alt="">
+                    <picture>
+                      <source srcset="images/catalog/coffee-can-1@1x.webp 1x, images/catalog/coffee-can-1@2x.webp 2x"
+                        type="image/webp" width="130" height="188">
+                      <img class="catalog-card__img" src="images/catalog/coffee-can-1@1x.png"
+                        srcset="images/catalog/coffee-can-1@2x.png 2x" width="130" height="188" alt="">
+                    </picture>
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
                   </a>
                   <p class="catalog-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -400,8 +466,12 @@
               <li class="catalog__item">
                 <div class="catalog-card catalog-card--hover">
                   <a href="#" class="catalog-card__link">
-                    <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
-                      alt="">
+                    <picture>
+                      <source srcset="images/catalog/coffee-can-2@1x.webp 1x, images/catalog/coffee-can-2@2x.webp 2x"
+                        type="image/webp" width="130" height="188">
+                      <img class="catalog-card__img" src="images/catalog/coffee-can-2@1x.png"
+                        srcset="images/catalog/coffee-can-2@2x.png 2x" width="130" height="188" alt="">
+                    </picture>
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
                   </a>
                   <p class="catalog-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -414,8 +484,12 @@
               <li class="catalog__item">
                 <div class="catalog-card">
                   <a href="#" class="catalog-card__link">
-                    <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
-                      alt="">
+                    <picture>
+                      <source srcset="images/catalog/coffee-can-3@1x.webp 1x, images/catalog/coffee-can-3@2x.webp 2x"
+                        type="image/webp" width="130" height="188">
+                      <img class="catalog-card__img" src="images/catalog/coffee-can-3@1x.png"
+                        srcset="images/catalog/coffee-can-3@2x.png 2x" width="130" height="188" alt="">
+                    </picture>
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
                   </a>
                   <p class="catalog-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -428,8 +502,12 @@
               <li class="catalog__item">
                 <div class="catalog-card">
                   <a href="#" class="catalog-card__link">
-                    <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
-                      alt="">
+                    <picture>
+                      <source srcset="images/catalog/coffee-can-4@1x.webp 1x, images/catalog/coffee-can-4@2x.webp 2x"
+                        type="image/webp" width="130" height="188">
+                      <img class="catalog-card__img" src="images/catalog/coffee-can-4@1x.png"
+                        srcset="images/catalog/coffee-can-4@2x.png 2x" width="130" height="188" alt="">
+                    </picture>
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
                   </a>
                   <p class="catalog-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -442,8 +520,12 @@
               <li class="catalog__item">
                 <div class="catalog-card">
                   <a href="#" class="catalog-card__link">
-                    <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
-                      alt="">
+                    <picture>
+                      <source srcset="images/catalog/coffee-can-5@1x.webp 1x, images/catalog/coffee-can-5@2x.webp 2x"
+                        type="image/webp" width="130" height="188">
+                      <img class="catalog-card__img" src="images/catalog/coffee-can-5@1x.png"
+                        srcset="images/catalog/coffee-can-5@2x.png 2x" width="130" height="188" alt="">
+                    </picture>
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
                   </a>
                   <p class="catalog-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -456,8 +538,12 @@
               <li class="catalog__item">
                 <div class="catalog-card">
                   <a href="#" class="catalog-card__link">
-                    <img class="catalog-card__img" src="./images/catalog/coffee-can-1.png" width="130" height="188"
-                      alt="">
+                    <picture>
+                      <source srcset="images/catalog/coffee-can-6@1x.webp 1x, images/catalog/coffee-can-6@2x.webp 2x"
+                        type="image/webp" width="130" height="188">
+                      <img class="catalog-card__img" src="images/catalog/coffee-can-6@1x.png"
+                        srcset="images/catalog/coffee-can-6@2x.png 2x" width="130" height="188" alt="">
+                    </picture>
                     <h3 class="catalog-card__title title title--secondary">Декаф Флэт Уайт</h3>
                   </a>
                   <p class="catalog-card__text">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
@@ -509,8 +595,8 @@
 
     <article class="map" data-test="map">
       <picture>
-        <!-- <source srcset="images/map.webp 1x, images/map@2x.webp 2x" type="image/webp" width="320" height="420"> -->
-        <img class="map__img" src="images/map.png" srcset="images/map@2x.png 2x" width="320" height="420"
+        <source srcset="images/map@1x.webp 1x, images/map@2x.webp 2x" type="image/webp" width="320" height="420">
+        <img class="map__img" src="images/map@1x.png" srcset="images/map@2x.png 2x" width="320" height="420"
           alt="Расположение на карте.">
       </picture>
     </article>

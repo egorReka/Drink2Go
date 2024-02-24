@@ -14,10 +14,13 @@
 }
 
 .slider-pagination__btn {
+  display: none;
   @include reset-button;
   padding: 10px 0;
 
   @media (min-width: $desktop-width) {
+    display: block;
+
     &::before {
       display: block;
       width: 62px;
