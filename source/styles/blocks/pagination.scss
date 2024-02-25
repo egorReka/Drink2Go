@@ -38,13 +38,13 @@
     color: var(--base-black);
   }
 
-  &:hover,
-  &:focus {
+  &:hover:not(.pagination__button--current),
+  &:focus:not(.pagination__button--current) {
     background-color: var(--alt-primary-lighter);
     color: var(--base-white);
   }
 
-  &:active {
+  &:active:not(.pagination__button--current) {
     background-color: var(--alt-primary-darker);
   }
 

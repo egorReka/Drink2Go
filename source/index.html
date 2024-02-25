@@ -14,7 +14,7 @@
   <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="vendor/nouislider/nouislider.css"> <!-- TODO не забыть -->
+  <!-- <link rel="stylesheet" href="vendor/nouislider/nouislider.css"> TODO не забыть -->
 </head>
 
 <body class="page__body">
@@ -25,28 +25,30 @@
         <div class="logo">
           <a class="logo__link" href="index.html">
             <picture>
-              <source media="(min-width: 1440px)" srcset="images/logo-big.svg" width="202" height="59">
-              <source media="(min-width: 768px)" srcset="images/logo-medium.svg" width="174" height="50">
+              <source media="(min-width: 1440px)" srcset="images/logo-big.svg" type="image/svg+xml" width="202"
+                height="59">
+              <source media="(min-width: 768px)" srcset="images/logo-medium.svg" type="image/svg+xml" width="174"
+                height="50">
               <img class="logo__image" src="./images/logo-small.svg" width="33" height="38" alt="Drink2Go.">
             </picture>
           </a>
           <h1 class="logo__title">Интернет-магазин кофейных напитков</h1>
         </div>
 
-        <!-- TODO nav--active открывает меню -->
+        <!-- TODO nav-active открывает меню -->
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link nav__link--current">Главная</a>
+              <a class="nav__link nav__link--current" href="#">Главная</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Каталог</a>
+              <a class="nav__link" href="#">Каталог</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Доставка</a>
+              <a class="nav__link" href="#">Доставка</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">О нас</a>
+              <a class="nav__link" href="#">О нас</a>
             </li>
           </ul>
         </nav>
@@ -56,7 +58,7 @@
             <a class="custom-menu__link" href="#">
               <!-- TODO проверить aria focusable -->
               <svg class="custom-menu__icon" width="16" height="16">
-                <use xlink:href="./images/icons/stack.svg#user"></use>
+                <use href="./images/icons/stack.svg#user"></use>
               </svg>
               <p class="custom-menu__text">Войти</p>
             </a>
@@ -64,18 +66,18 @@
           <li class="custom-menu__item">
             <a class="custom-menu__link" href="#">
               <svg class="custom-menu__icon" width="16" height="16">
-                <use xlink:href="./images/icons/stack.svg#basket"></use>
+                <use href="./images/icons/stack.svg#basket"></use>
               </svg>
               <p class="custom-menu__text">Корзина</p>
             </a>
           </li>
           <li class="custom-menu__item custom-menu__item--burger">
             <button class="custom-menu__burger burger" type="button">
-              <div class="burger__wrapper">
+              <span class="burger__wrapper">
                 <span class="burger__lines burger__lines--top"></span>
                 <span class="burger__lines burger__lines--middle"></span>
                 <span class="burger__lines burger__lines--bottom"></span>
-              </div>
+              </span>
               <!-- TODO Сменить textContent -->
               <span class="visually-hidden">Открыть меню.</span>
             </button>
@@ -94,21 +96,21 @@
         <div class="slider__wrapper">
 
           <button class="slider__btn slider__btn--left" type="button">
-            <svg class="custom-menu__icon" width="11" height="20">
-              <use xlink:href="images/icons/stack.svg#arrow-left"></use>
+            <svg width="11" height="20">
+              <use href="images/icons/stack.svg#arrow-left"></use>
             </svg>
             <span class="visually-hidden">Листать влево.</span>
           </button>
 
           <button class="slider__btn slider__btn--right" type="button">
-            <svg class="custom-menu__icon" width="11" height="20">
-              <use xlink:href="images/icons/stack.svg#arrow-right"></use>
+            <svg width="11" height="20">
+              <use href="images/icons/stack.svg#arrow-right"></use>
             </svg>
             <span class="visually-hidden">Листать вправо.</span>
           </button>
 
           <div class="slider__container">
-            <!-- TODO slider__list--move-right && slider__list--move-left -->
+            <!-- TODO slider__list-move-right && slider__list-move-left -->
             <ul class="slider__list">
               <li class="slider__item" id="slid-left">
                 <div class="slider-card">
@@ -243,17 +245,23 @@
 
         </div>
 
-        <ol class="slider-pagination">
+        <ul class="slider-pagination">
           <li class="slider-pagination__item">
-            <button class="slider-pagination__btn slider-pagination__btn--current" type="button"></button>
+            <button class="slider-pagination__btn slider-pagination__btn--current" type="button">
+              <span class="visually-hidden">Слайд 1</span>
+            </button>
           </li>
           <li class="slider-pagination__item">
-            <button class="slider-pagination__btn" type="button"></button>
+            <button class="slider-pagination__btn" type="button">
+              <span class="visually-hidden">Слайд 2</span>
+            </button>
           </li>
           <li class="slider-pagination__item">
-            <button class="slider-pagination__btn" type="button"></button>
+            <button class="slider-pagination__btn" type="button">
+              <span class="visually-hidden">Слайд 3</span>
+            </button>
           </li>
-        </ol>
+        </ul>
 
       </div>
     </section>
@@ -319,7 +327,7 @@
                 <div class="filter-price__fieldset" role="group" aria-labelledby="legend-price">
                   <h3 class="filter__title filter-price__label" id="legend-price">Цена</h3>
 
-                  <input class="filter-price__slider" type="range" name="" id="">
+                  <input class="filter-price__slider" type="range" name="slider-range" id="slider">
                   <!-- <div class="filter-price__slider" id="noUiSlider"></div> -->
 
                   <div class="filter-price__wrapper">
@@ -435,19 +443,19 @@
 
           <div class="catalog__container">
 
-            <label class="catalog__sorting sorting">
-              Сортировка:
-              <select class="sorting__select">
+            <div class="catalog__sorting sorting">
+              <label for="sorting-catalog">Сортировка:</label>
+              <select class="sorting__select" name="sorting-catalog" id="sorting-catalog">
                 <option class="sorting__option" value="default" selected>по умолчанию</option>
                 <option class="sorting__option" value="popular">популярные</option>
                 <option class="sorting__option" value="rating">по рейтингу </option>
               </select>
-            </label>
+            </div>
 
             <ul class="catalog__list">
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="#" class="catalog-card__link">
+                  <a class="catalog-card__link" href="#">
                     <picture>
                       <source srcset="images/catalog/coffee-can-1@1x.webp 1x, images/catalog/coffee-can-1@2x.webp 2x"
                         type="image/webp" width="130" height="188">
@@ -465,7 +473,7 @@
               </li>
               <li class="catalog__item">
                 <div class="catalog-card catalog-card--hover">
-                  <a href="#" class="catalog-card__link">
+                  <a class="catalog-card__link" href="#">
                     <picture>
                       <source srcset="images/catalog/coffee-can-2@1x.webp 1x, images/catalog/coffee-can-2@2x.webp 2x"
                         type="image/webp" width="130" height="188">
@@ -483,7 +491,7 @@
               </li>
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="#" class="catalog-card__link">
+                  <a class="catalog-card__link" href="#">
                     <picture>
                       <source srcset="images/catalog/coffee-can-3@1x.webp 1x, images/catalog/coffee-can-3@2x.webp 2x"
                         type="image/webp" width="130" height="188">
@@ -501,7 +509,7 @@
               </li>
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="#" class="catalog-card__link">
+                  <a class="catalog-card__link" href="#">
                     <picture>
                       <source srcset="images/catalog/coffee-can-4@1x.webp 1x, images/catalog/coffee-can-4@2x.webp 2x"
                         type="image/webp" width="130" height="188">
@@ -519,7 +527,7 @@
               </li>
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="#" class="catalog-card__link">
+                  <a class="catalog-card__link" href="#">
                     <picture>
                       <source srcset="images/catalog/coffee-can-5@1x.webp 1x, images/catalog/coffee-can-5@2x.webp 2x"
                         type="image/webp" width="130" height="188">
@@ -537,7 +545,7 @@
               </li>
               <li class="catalog__item">
                 <div class="catalog-card">
-                  <a href="#" class="catalog-card__link">
+                  <a class="catalog-card__link" href="#">
                     <picture>
                       <source srcset="images/catalog/coffee-can-6@1x.webp 1x, images/catalog/coffee-can-6@2x.webp 2x"
                         type="image/webp" width="130" height="188">
@@ -559,26 +567,27 @@
               <button class="pagination__button pagination__button--flip" type="button">
                 <span class="pagination__button-text">Назад</span>
                 <svg class="pagination__button-icon" width="10" height="10">
-                  <use xlink:href="./images/icons/stack.svg#pagination-arrow-left"></use>
+                  <use href="./images/icons/stack.svg#pagination-arrow-left"></use>
                 </svg>
               </button>
 
               <ol class="pagination__list">
                 <li class="pagination__item">
-                  <button class="pagination__button" title="Текущая страница">1</button>
+                  <button class="pagination__button" type="button">1</button>
                 </li>
                 <li class="pagination__item">
-                  <button class="pagination__button pagination__button--current" href="#">2</button>
+                  <button class="pagination__button pagination__button--current" type="button"
+                    title="Текущая страница">2</button>
                 </li>
                 <li class="pagination__item">
-                  <button class="pagination__button" href="#">3</button>
+                  <button class="pagination__button" type="button">3</button>
                 </li>
               </ol>
 
               <button class="pagination__button pagination__button--flip" type="button">
                 <span class="pagination__button-text">Вперёд</span>
                 <svg class="pagination__button-icon" width="10" height="10">
-                  <use xlink:href="./images/icons/stack.svg#pagination-arrow-right"></use>
+                  <use href="./images/icons/stack.svg#pagination-arrow-right"></use>
                 </svg>
               </button>
             </div>
@@ -592,22 +601,24 @@
   </main>
 
   <footer class="footer" data-test="footer">
+    <h2 class="visually-hidden">Информация о нас.</h2>
 
     <article class="map" data-test="map">
+      <h2 class="visually-hidden">Расположение на карте.</h2>
       <picture>
         <source srcset="images/map@1x.webp 1x, images/map@2x.webp 2x" type="image/webp" width="320" height="420">
         <img class="map__img" src="images/map@1x.png" srcset="images/map@2x.png 2x" width="320" height="420"
-          alt="Расположение на карте.">
+          alt="Санкт-Петербург, набережная реки Карповки, дом 5.">
       </picture>
     </article>
 
     <div class="footer__wrapper">
 
-      <header class="footer__header">
-        <h2 class="visually-hidden">Информация о нас.</h2>
+      <div class="footer__header">
         <a class="footer__logo" href="#">
           <picture>
-            <source media="(min-width: 768px)" srcset="images/logo-big.svg" width="170" height="36">
+            <source media="(min-width: 768px)" srcset="images/logo-big.svg" type="image/svg+xml" width="170"
+              height="36">
             <img class="footer__logo-image" src="images/logo-medium.svg" width="82" height="36"
               alt="Интеренет-магазин Drink2Go.">
           </picture>
@@ -636,7 +647,7 @@
             </a>
           </li>
         </ul>
-      </header>
+      </div>
 
       <div class="footer__container">
 
@@ -704,8 +715,8 @@
 
   </footer>
 
-  <script src="scripts/index.js"></script>
-  <script src="vendor/nouislider/nouislider.js"></script>
+  <!-- <script src="vendor/nouislider/nouislider.js"></script> -->
+  <script src="scripts/index.js" async></script>
 </body>
 
 </html>
