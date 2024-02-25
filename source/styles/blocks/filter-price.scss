@@ -1,8 +1,7 @@
 @use "../bootstrap.scss" as *;
 
-.filter-price__slider {
-  width: 100%;
-  padding: 2px 0;
+.filter-price__range {
+  // padding: 2px 0;
   margin-bottom: 26px;
 
   @media (min-width: $tablet-width) {
@@ -13,6 +12,71 @@
     margin-bottom: 24px;
   }
 }
+
+// Стили библиотеки no-ui-slider
+/* stylelint-disable */
+.filter-price__range {
+  &.noUi-target {
+    margin-left: 12px;
+    margin-right: 12px;
+    width: calc(100% - 24px);
+    background-color: var(--alt-light-grey);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  &.noUi-horizontal {
+    height: 4px;
+  }
+
+  & .noUi-connect {
+    background-color: var(--alt-primary-lighter);
+  }
+
+  &.noUi-horizontal .noUi-handle  {
+    width: 24px;
+    height: 24px;
+    right: -12px;
+    top: 50%;
+    transform: translateY(calc(-50% + 2px));
+  }
+
+  & .noUi-handle {
+    box-shadow: none;
+    border-radius: 50%;
+    border: 2px solid var(--alt-primary-lighter);
+
+    &::after {
+      display: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 100%;
+      top: 2px;
+      left: 2px;
+      background-color: var(--alt-primary-opacity-0_25);
+      content: "";
+    }
+
+    &:hover::after {
+      display: block;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  & .noUi-handle.noUi-active {
+    box-shadow: none;
+
+    &::after {
+    display: block;
+    background-color: var(--base-primary);
+    }
+  }
+}
+/* stylelint-enable */
 
 .filter-price__wrapper {
   display: flex;

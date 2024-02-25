@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    display: flex;
+    display: block;
     position: initial;
     transform: none;
     width: auto;
@@ -27,6 +27,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $desktop-width) {

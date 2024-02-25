@@ -14,7 +14,6 @@
   <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/styles.css">
-  <!-- <link rel="stylesheet" href="vendor/nouislider/nouislider.css"> TODO не забыть -->
 </head>
 
 <body class="page__body">
@@ -35,7 +34,6 @@
           <h1 class="logo__title">Интернет-магазин кофейных напитков</h1>
         </div>
 
-        <!-- TODO nav-active открывает меню -->
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -72,14 +70,14 @@
             </a>
           </li>
           <li class="custom-menu__item custom-menu__item--burger">
-            <button class="custom-menu__burger burger" type="button">
+            <button class="custom-menu__burger burger js-toggle-button" type="button">
               <span class="burger__wrapper">
                 <span class="burger__lines burger__lines--top"></span>
                 <span class="burger__lines burger__lines--middle"></span>
                 <span class="burger__lines burger__lines--bottom"></span>
               </span>
               <!-- TODO Сменить textContent -->
-              <span class="visually-hidden">Открыть меню.</span>
+              <span class="visually-hidden burger__text">Открыть меню.</span>
             </button>
           </li>
         </ul>
@@ -95,14 +93,14 @@
       <div class="slider">
         <div class="slider__wrapper">
 
-          <button class="slider__btn slider__btn--left" type="button">
+          <button class="slider__button slider__button--left slider-button-prev" type="button">
             <svg width="11" height="20">
               <use href="images/icons/stack.svg#arrow-left"></use>
             </svg>
             <span class="visually-hidden">Листать влево.</span>
           </button>
 
-          <button class="slider__btn slider__btn--right" type="button">
+          <button class="slider__button slider__button--right slider-button-next" type="button">
             <svg width="11" height="20">
               <use href="images/icons/stack.svg#arrow-right"></use>
             </svg>
@@ -326,8 +324,7 @@
                 <div class="filter-price__fieldset" role="group" aria-labelledby="legend-price">
                   <h3 class="filter__title filter-price__label" id="legend-price">Цена</h3>
 
-                  <input class="filter-price__slider" type="range" name="slider-range" id="slider">
-                  <!-- <div class="filter-price__slider" id="noUiSlider"></div> -->
+                  <div class="filter-price__range"></div>
 
                   <div class="filter-price__wrapper">
                     <label class="filter-price__input-wrapper filter-price__input-wrapper--min" for="min-value">
@@ -447,7 +444,7 @@
               <select class="sorting__select" name="sorting-catalog" id="sorting-catalog">
                 <option class="sorting__option" value="default" selected>по умолчанию</option>
                 <option class="sorting__option" value="popular">популярные</option>
-                <option class="sorting__option" value="rating">по рейтингу </option>
+                <option class="sorting__option" value="rating">по рейтингу</option>
               </select>
             </div>
 
@@ -713,8 +710,8 @@
 
   </footer>
 
-  <!-- <script src="vendor/nouislider/nouislider.js"></script> -->
-  <script src="scripts/index.js" async></script>
+  <script src="vendor/nouislider/nouislider.js" defer></script>
+  <script src="scripts/index.js" type="module"></script>
 </body>
 
 </html>
