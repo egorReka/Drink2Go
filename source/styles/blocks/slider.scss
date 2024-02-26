@@ -6,7 +6,7 @@
 
   @media (min-width: $desktop-width) {
     row-gap: 0;
-    grid-template-rows: minmax(630px , 1fr) auto;
+    grid-template-rows: minmax(630px, 1fr) auto;
   }
 }
 
@@ -76,20 +76,20 @@
   }
 
   &--lavender {
-    background-color: var(--bg-lavender-latt);
+    background-color: var(--bg-lavender-latte);
 
     @media (min-width: $tablet-width) {
       background-color: var(--base-white);
       background-image:
         linear-gradient(
-          var(---bg-lavender-latt) 77.3%,
+          var(---bg-lavender-latte) 77.3%,
           transparent 77.3%
         );
     }
 
     @media (min-width: $desktop-width) {
       background-image: none;
-      background-color: var(--bg-lavender-latt);
+      background-color: var(--bg-lavender-latte);
     }
   }
 }

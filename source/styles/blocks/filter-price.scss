@@ -14,74 +14,73 @@
 }
 
 // Стили библиотеки no-ui-slider
+
 /* stylelint-disable */
-.filter-price__range {
-  &.noUi-target {
-    width: calc(100%);
-    background-color: var(--alt-light-grey);
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
+.filter-price__range.noUi-target {
+  width: calc(100%);
+  background-color: var(--alt-light-grey);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.filter-price__range.noUi-horizontal {
+  height: 4px;
+  width: 256px;
+  margin-left: 24px;
+
+  @media (min-width: $tablet-width) {
+    width: 198px;
   }
 
-  &.noUi-horizontal {
-    height: 4px;
-    width: 256px;
-    margin-left: 24px;
+  @media (min-width: $desktop-width) {
+    width: 294px;
+  }
+}
 
-    @media (min-width: $tablet-width) {
-      width: 198px;
-    }
+.filter-price__range .noUi-connect {
+  background-color: var(--alt-primary-lighter);
+}
 
-    @media (min-width: $desktop-width) {
-      width: 294px;
-    }
+.filter-price__range.noUi-horizontal .noUi-handle {
+  width: 24px;
+  height: 24px;
+  right: 0;
+  top: 50%;
+  transform: translateY(calc(-50% + 2px));
+}
+
+.filter-price__range .noUi-handle {
+  box-shadow: none;
+  border-radius: 50%;
+  border: 2px solid var(--alt-primary-lighter);
+
+  &::after {
+    display: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    top: 2px;
+    left: 2px;
+    background-color: var(--alt-primary-opacity-0_25);
+    content: "";
   }
 
-  & .noUi-connect {
-    background-color: var(--alt-primary-lighter);
-  }
-
-  &.noUi-horizontal .noUi-handle  {
-    width: 24px;
-    height: 24px;
-    right: 0;
-    top: 50%;
-    transform: translateY(calc(-50% + 2px));
-  }
-
-  & .noUi-handle {
-    box-shadow: none;
-    border-radius: 50%;
-    border: 2px solid var(--alt-primary-lighter);
-
-    &::after {
-      display: none;
-      width: 16px;
-      height: 16px;
-      border-radius: 100%;
-      top: 2px;
-      left: 2px;
-      background-color: var(--alt-primary-opacity-0_25);
-      content: "";
-    }
-
-    &:hover::after {
-      display: block;
-    }
-
-    &::before {
-      display: none;
-    }
-  }
-
-  & .noUi-handle.noUi-active {
-    box-shadow: none;
-
-    &::after {
+  &:hover::after {
     display: block;
-    background-color: var(--base-primary);
-    }
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+.filter-price__range .noUi-handle.noUi-active {
+  box-shadow: none;
+
+  &::after {
+  display: block;
+  background-color: var(--base-primary);
   }
 }
 /* stylelint-enable */
