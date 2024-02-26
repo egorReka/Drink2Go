@@ -26,6 +26,16 @@
 
   &.noUi-horizontal {
     height: 4px;
+    width: 256px;
+    margin-left: 24px;
+
+    @media (min-width: $tablet-width) {
+      width: 198px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 294px;
+    }
   }
 
   & .noUi-connect {
@@ -35,13 +45,9 @@
   &.noUi-horizontal .noUi-handle  {
     width: 24px;
     height: 24px;
-    right: -24px;
+    right: 0;
     top: 50%;
     transform: translateY(calc(-50% + 2px));
-  }
-
-  &.noUi-horizontal .noUi-handle-upper {
-    right: -8px;
   }
 
   & .noUi-handle {
@@ -100,7 +106,7 @@
 }
 
 .filter-price__input {
-  min-width: 118px;
+  width: 118px;
   height: 40px;
   outline: none;
   border: 2px solid var(--alt-primary-lighter);
@@ -112,17 +118,23 @@
   line-height: 150%;
   text-align: center;
   color: var(--base-black);
+  appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 
   &::placeholder {
     color: var(--base-grey);
   }
 
   @media (min-width: $tablet-width) {
-    min-width: 88px;
+    width: 88px;
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 134px;
+    width: 134px;
   }
 
   &:focus {

@@ -78,6 +78,10 @@
     justify-content: center;
     gap: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .footer__item {
