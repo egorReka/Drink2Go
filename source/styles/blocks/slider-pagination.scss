@@ -6,10 +6,10 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    column-gap: 8px;
-    justify-content: center;
-    width: 202px;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 272px;
+    margin: 0 auto 20px;
   }
 }
 
