@@ -13,7 +13,9 @@
   @media (min-width: $desktop-width) {
     display: flex;
     gap: 30px;
-    padding-top: 40px;
+    max-width: $desktop-width;
+    margin: 0 auto;
+    padding: 40px 40px 0;
   }
 }
 
@@ -26,7 +28,7 @@
   padding: 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 0 30px;
+    padding: 40px 20px 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -87,14 +89,14 @@
   }
 
   @media (min-width: $tablet-width) {
-    width: 222px;
+    width: 223px;
     padding: 0;
     outline: none;
   }
 
   @media (min-width: $desktop-width) {
     width: 317px;
-    padding-top: 9px;
+    padding-top: 10px;
   }
 }
 

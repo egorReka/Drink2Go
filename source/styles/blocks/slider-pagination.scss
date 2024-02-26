@@ -13,7 +13,13 @@
   }
 }
 
-.slider-pagination__btn {
+.slider-pagination__item--current .slider-pagination__button {
+  &::before {
+    background-color: var(--base-primary);
+  }
+}
+
+.slider-pagination__button {
   @include reset-button;
   display: none;
   padding: 10px 0;
@@ -28,10 +34,6 @@
       background-color: var(--base-white);
       overflow: hidden;
       content: "";
-    }
-
-    &--current::before {
-      background-color: var(--base-primary);
     }
 
     &:hover::before,

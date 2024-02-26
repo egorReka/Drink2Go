@@ -14,7 +14,8 @@
       box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     }
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     }
   }
@@ -23,6 +24,7 @@
 .catalog-card__link {
   @include reset-link;
   padding-top: 20px;
+  outline: none;
 }
 
 .catalog-card__img {

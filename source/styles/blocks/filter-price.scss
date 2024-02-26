@@ -1,15 +1,15 @@
 @use "../bootstrap.scss" as *;
 
 .filter-price__range {
-  // padding: 2px 0;
-  margin-bottom: 26px;
+  margin: 30px 0 34px;
+  width: 280px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 22px;
+    margin: 30px 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 24px;
+    margin: 30px 0 32px;
   }
 }
 
@@ -17,9 +17,7 @@
 /* stylelint-disable */
 .filter-price__range {
   &.noUi-target {
-    margin-left: 12px;
-    margin-right: 12px;
-    width: calc(100% - 24px);
+    width: calc(100%);
     background-color: var(--alt-light-grey);
     border: none;
     border-radius: 0;
@@ -37,9 +35,13 @@
   &.noUi-horizontal .noUi-handle  {
     width: 24px;
     height: 24px;
-    right: -12px;
+    right: -24px;
     top: 50%;
     transform: translateY(calc(-50% + 2px));
+  }
+
+  &.noUi-horizontal .noUi-handle-upper {
+    right: -8px;
   }
 
   & .noUi-handle {
